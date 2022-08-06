@@ -11,7 +11,7 @@ html,body {
     height: 100%;
     padding: 0;
     margin: 0;
-   overflow: hidden;
+  
 }
 
 /* quicksand-600 - latin */
@@ -48,7 +48,7 @@ html,body {
     color: inherit; 
   }
 
-  header{
+  header,main{
     height: 100%;
     
   }
@@ -58,18 +58,30 @@ html,body {
     grid-template-columns: 1fr 1fr 1fr;
     background: none;
     align-items: flex-end;
-    padding-top: 50px;
+    height: 70px;
+    align-items: center;
+    background: linear-gradient(110deg, white 30%, rgb(45, 45, 45) 30%);
+    width: 100%;
+    
+  }
+
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
   }
 
   .header h1{
    
-    color: white;
+    color: black;
     text-decoration: underline;
     text-align: center;
     font-size: 50px;
     animation: slidein-left 1.5s;
-    
+ 
+    width: fit-content;
+    margin-right: 100px;
   }
 
   .head-links{
@@ -90,31 +102,47 @@ html,body {
   }
 
 .head-links a:hover {
-    transform: scale(1.5);
+    transform: scale(1);
 }
+
 
   .log-in-link{
     color: white;
     font-size: 24px;
    text-align: center;
-   animation: slidein-right 1.5s;
    transition: transform 0.2s;
+ 
+  }
+
+  .log-in-link a{
+      animation: slidein-right 1.5s;
+   transition: transform 0.2s;
+   width: fit-content;
   
   }
   
 
 .log-in-link:hover{
     transform: scale(1.5);
+    color: b;
+}
+
+.log-in-link a{
+
 }
 
 .color-background {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
     height: 100%;
     animation: change 35s infinite;
+    gap: 100px;
 }
 
 
 .head-links a:hover {
-    color: #000;
+    color: white;
   }
   
   .head-links a::before {
@@ -125,7 +153,7 @@ html,body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #000;
+    background-color: white;
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
@@ -134,14 +162,198 @@ html,body {
     transform: scaleX(1);
   }
 
+
+
+  .header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 90%;
+    height: 750px;
+    border: 5px solid rgb(45, 45, 45);
+    border-radius: 25px;
+
+    animation: slide-up 2s;
+    
+  }
+
+  .header-content p:nth-child(1){
+    margin-top: 100px;
+    font-size: 30px;
+    animation: fadeIn 2s;
+  }
+
+  .header-content p:nth-child(2){
+    margin-top: 300px;
+    font-size: 30px;
+    animation: fadeIn 2s;
+  }
+
+  .header-content button{
+    margin-top: 30px;
+    font-size: 30px;
+    background-color: rgb(45, 45, 45);
+    border: none;
+    color: white;
+    width: 200px;
+   
+    border-radius: 25px;
+    animation: fadeIn 2s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+
+
+
+
+.sector-one{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    height: 800px;
+    background-color: rgb(45, 45, 45);
+    justify-content: center;
+}
+
+.sector-one .color-block{
+    height: 70%;
+    width: 30px;
+    background-color: rgb(255, 0, 145) ;
+    
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.sector-one p{
+    width: 600px;
+    height: 500px;
+    background-color: rgb(255, 0, 145);
+    margin-top: 30px;
+}
+
+.sector-one img{
+    
+    width: auto;
+    height: 700px;
+    color: aqua;
+
+    margin-left: 30px;
+    margin-top: 30px;
+    
+}
+
+.bridge-one{
+
+}
+
+.sector-two{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    height: 800px;
+    background-color: white;
+}
+
+
+.sector-two .color-block{
+    height: 70%;
+    width: 30px;
+    background-color: rgb(0, 200, 255) ;
+    
+    margin-right: 30px;
+    margin-top: 30px;
+    justify-self: end;
+}
+
+.sector-two p{
+    width: 600px;
+    background-color: rgb(0, 200, 255);
+}
+
+.sector-two img{
+    height: 90%;
+    width: 300px;
+    color: aqua;
+}
+
+
+.sector-three{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  height: 800px;
+  background-color: rgb(45, 45, 45);
+  justify-content: center;
+}
+
+.sector-three .color-block{
+  height: 70%;
+  width: 30px;
+  background-color: rgb(0, 255, 128);
+  
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.sector-three p{
+  width: 600px;
+  height: 500px;
+  background-color: rgb(0, 255, 128);
+  margin-top: 30px;
+}
+
+.sector-three img{
+  
+  width: auto;
+  height: 700px;
+  color: aqua;
+
+  margin-left: 30px;
+  margin-top: 30px;
+  
+}
+
+.sector-four{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  height: 800px;
+  background-color: white;
+}
+
+
+.sector-four .color-block{
+  height: 70%;
+  width: 30px;
+  background-color: rgb(255, 157, 0) ;
+  
+  margin-right: 30px;
+  margin-top: 30px;
+  justify-self: end;
+}
+
+.sector-four p{
+  width: 600px;
+  background-color: rgb(255, 157, 0);
+}
+
+.sector-four img{
+  height: 90%;
+  width: 300px;
+  color: aqua;
+}
+
+
 @keyframes change {
     0%{background-color: rgb(255, 0, 145);}
     25%{background-color: rgb(0, 255, 128);}
-    50%{background-color: rgb(0, 225, 255);}
-    75%{background-color: rgb(255, 150, 0);}
+    50%{background-color: rgb(0, 200, 255);}
+    75%{background-color: rgb(255, 157, 0);}
     100%{background-color: rgb(255, 0, 145);}
-
 }
+
 
 @keyframes slidein-left {
     from {
@@ -178,3 +390,19 @@ html,body {
       
     }
   }
+
+  @keyframes slide-up {
+    from {
+      margin-top: 150px;
+      height: 0px;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    50% { opacity: 0; }
+    75% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
