@@ -21,13 +21,13 @@ html,body {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 600;
-    src: url('../fonts/quicksand-v30-latin-600.eot'); /* IE9 Compat Modes */
+    src: url('fonts/quicksand-v30-latin-600.eot'); /* IE9 Compat Modes */
     src: local(''),
-         url('../fonts/quicksand-v30-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/quicksand-v30-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/quicksand-v30-latin-600.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/quicksand-v30-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/quicksand-v30-latin-600.svg#Quicksand') format('svg'); /* Legacy iOS */
+         url('fonts/quicksand-v30-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/quicksand-v30-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/quicksand-v30-latin-600.woff') format('woff'), /* Modern Browsers */
+         url('fonts/quicksand-v30-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/quicksand-v30-latin-600.svg#Quicksand') format('svg'); /* Legacy iOS */
   }
 
   /* quicksand-700 - latin */
@@ -35,13 +35,13 @@ html,body {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/quicksand-v30-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('fonts/quicksand-v30-latin-700.eot'); /* IE9 Compat Modes */
     src: local(''),
-         url('../fonts/quicksand-v30-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/quicksand-v30-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/quicksand-v30-latin-700.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/quicksand-v30-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/quicksand-v30-latin-700.svg#Quicksand') format('svg'); /* Legacy iOS */
+         url('fonts/quicksand-v30-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/quicksand-v30-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/quicksand-v30-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('fonts/quicksand-v30-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/quicksand-v30-latin-700.svg#Quicksand') format('svg'); /* Legacy iOS */
   }
 
 
@@ -52,9 +52,17 @@ html,body {
 
   header{
     height: 100%;
+    width: 100%;
+  }
+
+  .sticky{
+   border-bottom: 5px solid white;
+   animation: change1 35s infinite;
   }
 
   .header{
+    z-index:1000;
+    position: fixed;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background: none;
@@ -161,6 +169,7 @@ transform:scale(2);
 
 
   .header-content{
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,6 +221,7 @@ transform:scale(2);
     background-color: rgb(45, 45, 45);
     justify-content: center;
     align-items: center;
+
 }
 
 .sector-one .color-block{
@@ -237,6 +247,7 @@ transform:scale(2);
   padding: 30px;
   border: 2px solid white;
   border-radius: 25px;
+  
 }
 
 .sector-one .text-block p{
@@ -251,7 +262,7 @@ transform:scale(2);
   background-color: white;
   width: 800px;
   height: 500px;
-  margin-left: -450px;
+  margin-left: -350px;
  
   
   box-shadow: 10px 10px 0px rgb(255, 0, 145);
@@ -443,6 +454,7 @@ footer{
   background-color: white;
   justify-content: center;
   align-items: center;
+  
 }
 
 .border{
@@ -470,6 +482,7 @@ footer{
   background-color: rgb(45, 45, 45);
   color: white;
   border-style: none;
+  
 }
 
 .bottem-footer{
@@ -482,12 +495,39 @@ footer{
 }
 
 
+
+
+
+.animate{
+  animation: slide-up 2s;
+}
+
+.sector{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.sector.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 @keyframes change {
     0%{background-color: rgb(255, 0, 145);}
     25%{background-color: rgb(0, 255, 128);}
     50%{background-color: rgb(0, 200, 255);}
     75%{background-color: rgb(255, 157, 0);}
     100%{background-color: rgb(255, 0, 145);}
+}
+
+@keyframes change1 {
+  0%{border-bottom-color: rgb(255, 0, 145);}
+  25%{border-bottom-color: rgb(0, 255, 128);}
+  50%{border-bottom-color: rgb(0, 200, 255);}
+  75%{border-bottom-color: rgb(255, 157, 0);}
+  100%{border-bottom-color:rgb(255, 0, 145);}
 }
 
 
