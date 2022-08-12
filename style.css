@@ -261,7 +261,7 @@ transform:scale(2);
 .sector-one .video{
   background-color: white;
   width: 800px;
-  height: 500px;
+  height: auto;
   margin-left: -350px;
  
   
@@ -370,17 +370,13 @@ transform:scale(2);
 .sector-three .video{
   background-color: white;
   width: 800px;
-  height: 500px;
+  height: auto;
   margin-left: -450px;
  
   
   box-shadow: 10px 10px 0px rgb(0, 255, 128);
 }
 
-.sector-three img{
-
-  
-}
 
 .sector-four{
   background: linear-gradient(110deg,  rgb(45, 45, 45) 70%,white 70%);
